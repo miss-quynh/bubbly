@@ -18,6 +18,13 @@
   <title></title>
 </head>
 <body>
+  <% if !logged_in? %>
+    <a href="/sessions/new">login</a> |
+    <a href="/users/new">register</a>
+  <% end %>
+
+  <% erb :'_errors' %>
+
   <%= yield %>
 </body>
 </html>

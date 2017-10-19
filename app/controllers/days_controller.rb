@@ -1,4 +1,4 @@
-get '/days/:id' do
-  @day = Day.find_by(id: params[:id])
+get '/today' do
+  @day = Day.find_or_create_by(date: Date.today)
   erb :'days/show'
 end

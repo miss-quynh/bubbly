@@ -4,6 +4,6 @@
   <input type="text" name="user[first_name]" value="<%= @user.try(:first_name) %>" placeholder="First Name"><br><br>
   <input type="text" name="user[last_name]" value="<%= @user.try(:last_name) %>" placeholder="Last Name"><br><br>
   <input type="text" name="user[username]" value="<%= @user.try(:username) %>" placeholder="Username"><br><br>
-  <input type="password" name="user[password]" placeholder="Password"><br><br>
+  <input type="password" name="user[password]" placeholder="Password" required><br><br>
   <input type="submit" value="Register">
 </form>
