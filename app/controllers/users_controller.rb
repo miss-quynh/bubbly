@@ -1,7 +1,7 @@
 # users#NEW
 get '/users/new' do
   @user = User.new
-  erb :'new'
+  erb :'users/new'
 end
 
 # users#CREATE

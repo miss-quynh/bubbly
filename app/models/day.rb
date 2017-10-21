@@ -1,7 +1,6 @@
 class Day < ActiveRecord::Base
   # Remember to create a migration!
 
-  has_many :quotes
   has_many :national_holidays, class_name: 'Holiday'
 
   # def national_holidays
@@ -12,11 +11,6 @@ class Day < ActiveRecord::Base
 
 
   private
-
-  def get_quotes
-    # hit quote api
-    # for each quote, create a Quote object and associate it with the current Day object
-  end
 
   def get_national_holidays
     # scrape some national holiday website

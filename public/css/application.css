@@ -1,8 +1,21 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%
+}
+
 .container {
   padding: 16px;
 }
 
+label {
+  font-family: Palatino;
+}
+
 input[type=text], input[type=password] {
+  font-family: Palatino;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -12,11 +25,73 @@ input[type=text], input[type=password] {
 }
 
 input[type=submit] {
-  background-color: #AFEEEE;
-  color: #F0F8FF;
+  font-family: Palatino;
+  background-color: #d0e2e7;
+  color: #FFFFFF;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
+}
+
+.home_body {
+  background-image: url("Bird.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.home_page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+
+#welcome {
+  margin-bottom: 0px;
+  font-family: Palatino;
+  font-weight: bold;
+  font-size: 10vw;
+  color: #fcfaf9;
+  text-align: center;
+  flex-shrink: 1;
+}
+
+.link_buttons {
+  margin-bottom: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.half-button {
+  width: 50%;
+  display: flex;
+  justify-content: stretch;
+}
+
+.border-right {
+  border-right: 1px solid #c8cdd1;
+}
+
+.sign_in_button {
+  width: 100%;
+  text-decoration : none;
+  background: #DCDCDC;
+  padding: 7px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+
+.sign_up_button {
+  width: 100%;
+  text-decoration : none;
+  background: #DCDCDC;
+  padding: 7px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
 }
