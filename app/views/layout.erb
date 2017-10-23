@@ -18,10 +18,6 @@
   <title></title>
 </head>
 <body>
-  <% if logged_in? %>
-    <a href="/logout">Sign Out</a>
-  <% end %>
-
   <% erb :'_errors' %>
 
   <%= yield %>

@@ -2,11 +2,18 @@
   <h1 id="welcome">Welcome!</h1>
 
   <div class="link_buttons">
-    <div class='half-button border-right'>
-      <a href="/sessions/new" class="sign_in_button">Sign In</a>
-    </div>
-    <div class='half-button'>
-      <a href="/users/new" class="sign_up_button">Sign Up</a>
-    </div>
+    <% if logged_in? %>
+      <div class='half-button'>
+        <a href="/logout" class="sign_in_button">Sign Out</a>
+      </div>
+    <% else %>
+      <div class='half-button border-right'>
+        <a href="/sessions/new" class="sign_in_button">Sign In</a>
+      </div>
+      <div class='half-button'>
+        <a href="/users/new" class="sign_up_button">Sign Up</a>
+      </div>
+    <% end %>
   </div>
+
 </div>

@@ -18,6 +18,8 @@ gem 'bcrypt'
 
 gem 'httparty'
 
+gem 'nokogiri'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
