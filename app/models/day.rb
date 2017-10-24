@@ -17,7 +17,6 @@ class Day < ActiveRecord::Base
     holidays.each do |holiday|
       self.national_holidays.create(name: holiday.text)
     end
-
   end
 
 end
