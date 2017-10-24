@@ -1,4 +1,4 @@
 # index#HOME
 get '/' do
-  erb :index, layout: :home_layout
+  erb :index
 end

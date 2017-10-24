@@ -13,25 +13,27 @@ var signinFormListener = function() {
   $('.sign_in_button').on('click', function(event) {
     event.preventDefault();
 
-    var link = $(this)
-    var method = link.attr('method')
-    var url = link.attr('href')
-    var data = link.serialize()
+    $('.link_buttons').hide();
+    $('.form').removeClass('hidden');
 
-    var call = $.ajax({
-      method:method,
-      url: url,
-      data: data
-    })
+    // var link = $(this)
+    // var method = link.attr('method')
+    // var url = link.attr('href')
+    // var data = link.serialize()
 
-    call.done(function( response ) {
-      $('.link_buttons').hide();
-      $('.link_buttons').after(response);
-    })
+    // var call = $.ajax({
+    //   method:method,
+    //   url: url,
+    //   data: data
+    // })
 
-    call.fail(function( response ) {
-      console.log('failed')
-    })
+    // call.done(function( response ) {
+    //   $('.link_buttons').after(response);
+    // })
+
+    // call.fail(function( response ) {
+    //   console.log('failed')
+    // })
   })
 }
 

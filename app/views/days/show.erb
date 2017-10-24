@@ -4,14 +4,27 @@
 
 
   <div id="today-content">
-    <% @day.national_holidays.each do |holiday| %>
-      <div class="circles national-holidays">
-        <p><%= holiday.name %></p>
-      </div>
-    <% end %>
-
-    <div class="quote-sentence">
-      <p>"<%= Quote.quote_of_the_day %>"</p>
+    <div id="holiday-container">
+      <% @day.national_holidays.each do |holiday| %>
+        <div class="circles national-holidays">
+          <p class="holiday-names"><%= holiday.name %></p>
+        </div>
+      <% end %>
     </div>
+
+    <div class="clock">
+      <div id="Date"></div>
+        <ul>
+          <li id="hours"></li>
+          <li id="point">:</li>
+          <li id="min"></li>
+          <li id="point">:</li>
+          <li id="sec"></li>
+        </ul>
+    </div>
+
+    <p class="quote-body">
+      <span class="quote-body-text">"<%= Quote.quote_of_the_day %>"</span>
+    </p>
   </div>
 </div>
