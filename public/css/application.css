@@ -167,7 +167,6 @@ input[type=submit] {
   left: 0px;
   right: 0px;
   align-items: flex-end;
-  padding-bottom: 20px;
 }
 
 #holiday-container {
@@ -177,7 +176,6 @@ input[type=submit] {
   align-content: space-around;
   margin-right: 10%;
   margin-left: 10%;
-  margin-top: 5%
 }
 
 .national-holidays {
@@ -187,17 +185,27 @@ input[type=submit] {
   border-radius: 50%;
   width: 160px;
   height: 160px;
-  background: rgba(222, 139, 159, 0.4);
+  background: rgba(222, 139, 159, 0.3);
+}
+
+.national-holidays:hover {
+  background-color: #99a5cd;
+  box-shadow: 0 0 8px #ea4c89, inset 0 0 8px #ea4c89;
+  -webkit-animation: pulse 2s linear 1s infinite;
 }
 
 .holiday-names {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:140.5%;
-  font-weight:300;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 140.5%;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
   text-align: center;
   vertical-align: middle;
   width: 80%;
+}
+
+.holiday-names:hover {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .hidden {
