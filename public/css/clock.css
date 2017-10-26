@@ -42,13 +42,13 @@ ul li {
   text-shadow: 0 0 5px #cdaed0;
 }
 
-#point {
+/*#second-point {
   position: relative;
   -moz-animation: mymove 1s ease infinite;
   -webkit-animation: mymove 1s ease infinite;
   padding-left: 10px;
   padding-right: 10px;
-}
+}*/
 
 /* Simple Animation */
 @-webkit-keyframes mymove {
