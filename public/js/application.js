@@ -1,64 +1,22 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
 
-  signinFormListener()
-  signupFormListener()
 });
 
-var signinFormListener = function() {
-  $('.sign_in_button').on('click', function(event) {
-    event.preventDefault();
+// var Quote = function(author, quote) {
+//   this.author = author;
+//   this.quote = quote;
+// };
 
-    $('.link_buttons').hide();
-    $('.form').removeClass('hidden');
+// Quote.prototype.quote_of_the_day = function() {
 
-    // var link = $(this)
-    // var method = link.attr('method')
-    // var url = link.attr('href')
-    // var data = link.serialize()
+//   var xhr = new XMLHttpRequest();
+//   xhr.open("GET", "http://quotes.rest/qod.json?category=inspire", false);
+//   xhr.send();
+//   var result = JSON.parse(xhr.response);
+//   var quote = result["contents"]["quotes"][0]["quote"]
+//   var author = result["contents"]["quotes"][0]["author"]
 
-    // var call = $.ajax({
-    //   method:method,
-    //   url: url,
-    //   data: data
-    // })
-
-    // call.done(function( response ) {
-    //   $('.link_buttons').after(response);
-    // })
-
-    // call.fail(function( response ) {
-    //   console.log('failed')
-    // })
-  })
-}
-
-var signupFormListener = function() {
-  $('.sign_up_button').on('click', function(event) {
-    event.preventDefault();
-
-    var link = $(this)
-    var method = link.attr('method')
-    var url = link.attr('href')
-    var data = link.serialize()
-
-    var call = $.ajax({
-      method:method,
-      url: url,
-      data: data
-    })
-
-    call.done(function( response ) {
-      $('.link_buttons').hide();
-      $('.link_buttons').after(response);
-    })
-
-    call.fail(function( response ) {
-      console.log('failed')
-    })
-  })
-}
+//   console.log(xhr.status);
+//   console.log(xhr.statusText);
+// }
