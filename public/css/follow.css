@@ -98,3 +98,11 @@ ul.social-icons {
 .fa-google:hover {
   background-color: #c71610;
 }
+
+@media screen and (max-width: 450px) {
+  #quote-container {
+    position: fixed;
+    bottom: 20px;
+
+  }
+}

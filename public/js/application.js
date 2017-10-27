@@ -13,6 +13,7 @@ var displayAuthorListener = function() {
 
 var hideAuthorListener = function() {
   $(".quote-body-text").on("mouseoff", function(event) {
+    console.log('mouse out')
     event.preventDefault();
 
     $(".quote-author-text").toggle()

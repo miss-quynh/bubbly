@@ -3,7 +3,7 @@ class CreateQuotes < ActiveRecord::Migration[5.1]
     create_table :quotes do |t|
       t.string :author
       t.string :body
-      t.date :day
+      t.references :day
 
       t.timestamps
     end
