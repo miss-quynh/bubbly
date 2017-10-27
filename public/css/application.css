@@ -19,25 +19,35 @@ body {
   overflow: hidden;
 }
 
-#hello-user {
+#navigation-bar {
+  overflow: hidden;
+  background: rgba(255, 208, 196, 0.4);
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  position: fixed;
+}
+
+#navigation-bar .site-name {
+  float: left;
+  display: block;
   margin-bottom: 0px;
-  margin-right: 20px;
-  font-family: brandon-grotesque, sans-serif;
-  /*font-family: Palatino;*/
+  font-family: 'Lobster', serif;
   font-weight: bold;
-  font-size: 6vw;
+  font-size: 47px;
+  text-shadow: 4px 4px 4px #aaa;
   color: #fcfaf9;
-  text-align: right;
+  text-align: center;
+  padding: 2px 16px;
 }
 
 #quote-container {
-  bottom: 10px;
-  position: absolute;
   margin-right: auto;
   margin-left: auto;
   left: 0px;
   right: 0px;
-  align-items: flex-end;
+  align-items: center;
+  padding-bottom: 45px;
 }
 
 .quote-body {
@@ -60,7 +70,7 @@ body {
   align-items: center;
   margin-right: 8%;
   margin-left: 8%;
-  height: 50vh;
+  height: 46vh;
 }
 
 .national-holidays {
@@ -68,8 +78,8 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: 160px;
-  height: 160px;
+  width: 155px;
+  height: 155px;
   background: rgba(232, 219, 228, 0.3);
   -webkit-transition: background 8s;
 }

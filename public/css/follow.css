@@ -4,11 +4,11 @@ ul {
 }
 
 .footer-social-icons {
-  width: 350px;
-  display:block;
-  bottom: 0;
-  position: absolute;
-  left: 0px;
+  float: right;
+  display: block;
+  margin-bottom: 0 auto;
+  width: 300px;
+  padding-top: 8px;
 }
 
 ul.social-icons {
@@ -16,8 +16,9 @@ ul.social-icons {
 }
 
 .social-icons li {
-  display: flex;
-  align-items: center;
+  vertical-align: top;
+  display: inline;
+  height: 100px;
 }
 
 .social-icons a {
