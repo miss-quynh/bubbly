@@ -1,7 +1,23 @@
 $(document).ready(function() {
-
-
+  displayAuthorListener();
+  hideAuthorListener();
 });
+
+var displayAuthorListener = function() {
+  $(".quote-body-text").on("mouseover", function(event) {
+    event.preventDefault();
+
+    $(".quote-author-text").toggle()
+  })
+};
+
+var hideAuthorListener = function() {
+  $(".quote-body-text").on("mouseoff", function(event) {
+    event.preventDefault();
+
+    $(".quote-author-text").toggle()
+  })
+};
 
 // var Quote = function(author, quote) {
 //   this.author = author;
