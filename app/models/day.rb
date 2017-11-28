@@ -1,11 +1,13 @@
 require 'open-uri'
 
 class Day < ActiveRecord::Base
-  # Remember to create a migration!
 
-  after_save :get_national_holidays
+  include HTTParty
+
+  after_save :get_national_holidays, :get_quote
 
   has_many :national_holidays, class_name: 'Holiday'
+  has_one :quote
 
   private
 
@@ -17,6 +19,12 @@ class Day < ActiveRecord::Base
     holidays.each do |holiday|
       self.national_holidays.create(name: holiday.text)
     end
+  end
+
+  def get_quote
+    quote = Quote.generate
+    quote.day = self
+    quote.save
   end
 
 end

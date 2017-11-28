@@ -1,5 +1,3 @@
-/* CSS styling for clock */
-
 @font-face {
   font-family: 'BebasNeueRegular';
   src: url('BebasNeue-webfont.eot');
@@ -11,12 +9,11 @@
   font-style: normal;
 }
 
-.clock {
-  width: 600px;
+.clock-container {
+  width: 800px;
   margin: 0 auto;
-  /*padding: 30px;*/
-  /*border: 1px solid #333;*/
   color: #fff;
+  padding-top: 35px;
 }
 
 #Date {
@@ -26,29 +23,29 @@
   text-shadow: 0 0 5px #cdaed0;
 }
 
-ul {
-  width: 600px;
+.clock-display {
+  width: 800px;
   margin: 0 auto;
   padding: 0px;
   list-style: none;
   text-align: center;
 }
 
-ul li {
+.numbers-symbols {
   display: inline;
-  font-size: 8em;
+  font-size: 9em;
   text-align: center;
   font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
   text-shadow: 0 0 5px #cdaed0;
 }
 
-#point {
+/*#second-point {
   position: relative;
   -moz-animation: mymove 1s ease infinite;
   -webkit-animation: mymove 1s ease infinite;
   padding-left: 10px;
   padding-right: 10px;
-}
+}*/
 
 /* Simple Animation */
 @-webkit-keyframes mymove {

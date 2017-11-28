@@ -1,9 +1,17 @@
-<div class="today_page">
-
-  <h1 id="hello-user"> Hello<%=', ' + current_user.first_name.capitalize if logged_in? %>! </h1>
-
-
+<div class="today-page">
   <div id="today-content">
+
+    <div class="clock-container">
+      <div id="Date"></div>
+        <ul class="clock-display">
+          <li class="numbers-symbols" id="hours"></li>
+          <li class="numbers-symbols" id="first-point">:</li>
+          <li class="numbers-symbols" id="min"></li>
+          <!-- <li id="second-point">:</li>
+          <li id="sec"></li> -->
+        </ul>
+    </div>
+
     <div id="holiday-container">
       <% @day.national_holidays.each do |holiday| %>
         <div class="circles national-holidays">
@@ -12,19 +20,24 @@
       <% end %>
     </div>
 
-    <div class="clock">
-      <div id="Date"></div>
-        <ul>
-          <li id="hours"></li>
-          <li id="point">:</li>
-          <li id="min"></li>
-          <li id="point">:</li>
-          <li id="sec"></li>
-        </ul>
+    <div id="quote-container">
+      <p class="quote-body">
+        <span class="quote-body-text">"<%= @quote.body %>"</span><br>
+        <span class="hidden quote-author-text"><%= @quote.author %></span>
+      </p>
     </div>
 
-    <p class="quote-body">
-      <span class="quote-body-text">"<%= Quote.quote_of_the_day %>"</span>
-    </p>
   </div>
+
+  <div id="navigation-bar">
+    <span class="site-name">bubbly</span>
+
+    <div id="follow-container">
+      <span class="follow-icons">
+        <%= erb :'days/_follow' %>
+      </span>
+    </div>
+  </div>
+
 </div>
+

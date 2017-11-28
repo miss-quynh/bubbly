@@ -1,4 +1,3 @@
-# index#HOME
 get '/' do
-  erb :index
+  redirect '/today'
 end

@@ -2,15 +2,19 @@ class Quote < ActiveRecord::Base
 
   include HTTParty
 
-  def self.quote_of_the_day
-    quote = self.find_by(day: Date.today)
-    if quote
-      quote.quote
-    else
-      result = self.get('http://quotes.rest/qod.json?category=inspire')
-      new_quote = self.create(quote: result["contents"]["quotes"].first["quote"], day: Date.today)
-      new_quote.quote
-    end
+  belongs_to :day
+
+  def self.generate
+    result = self.get('http://quotes.rest/qod.json?category=inspire')
+    self.create(parse_response(result))
+  end
+
+  private
+
+  def self.parse_response(response)
+    body = response["contents"]["quotes"].first["quote"]
+    author = response["contents"]["quotes"].first["author"]
+    return { body: body, author: author }
   end
 
 end

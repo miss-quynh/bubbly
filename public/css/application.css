@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  height: 100%
+  height: 100%;
 }
 
 .home-body {
@@ -19,163 +19,58 @@ body {
   overflow: hidden;
 }
 
-label {
-  font-family: Palatino;
-}
-
-.form {
-  width: 400px;
-}
-
-input[type=text], input[type=password] {
-  font-family: Palatino;
+#navigation-bar {
+  overflow: hidden;
+  background: rgba(255, 208, 196, 0.4);
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+  height: 10.5%;
+  bottom: 0;
+  position: fixed;
 }
 
-input[type=submit] {
-  font-family: Palatino;
-  background-color: #d0e2e7;
-  color: #FFFFFF;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-.home-page {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding-right: 10%;
-}
-
-.text-divider {
-  font-family: Palatino;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 2rem 0;
-  color: white;
-}
-
-.text-divider:before {
-  margin-right: 10px;
-}
-
-.text-divider:after, .text-divider:before {
-  content: '';
-  min-width: 450px;
-  flex-grow: 1;
-  height: 1px;
-  background-color: white;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.text-divider:after {
-  margin-left: 10px;
-}
-
-#welcome {
+#navigation-bar .site-name {
+  float: left;
+  display: block;
   margin-bottom: 0px;
-  font-family: Palatino;
+  font-family: 'Lobster', serif;
   font-weight: bold;
-  font-size: 8vw;
+  font-size: 3em;
+  text-shadow: 4px 4px 4px #aaa;
   color: #fcfaf9;
   text-align: center;
-  flex-shrink: 1;
+  padding: 2px 16px;
 }
 
-.link_buttons {
-  display: flex;
-  justify-content: space-around;
-}
-
-.half-button {
-  width: 50%;
-  display: flex;
-  justify-content: stretch;
-}
-
-.border-right {
-  border-right: 1px solid #c8cdd1;
-}
-
-.sign_in_button {
-  width: 100%;
-  text-decoration : none;
-  background: #DCDCDC;
-  padding: 7px;
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-}
-
-.sign_up_button {
-  width: 100%;
-  text-decoration : none;
-  background: #DCDCDC;
-  padding: 7px;
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-}
-
-.sign_out_button {
-  width: 100%;
-  text-decoration : none;
-  background: #DCDCDC;
-  padding: 7px;
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-}
-
-.sign-in-container {
-  margin-bottom: 6%;
-  height: 30%;
-}
-
-#hello-user {
-  margin-bottom: 0px;
-  margin-right: 20px;
-  font-family: Palatino;
-  font-weight: bold;
-  font-size: 6vw;
-  color: #fcfaf9;
-  text-align: right;
-}
-
-.quote-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:112.5%;
-  font-weight:300;
-  color: rgba(255, 255, 255, 0.9);
-  line-height:120%;
-  text-align: center;
-  position: absolute;
+#quote-container {
   margin-right: auto;
   margin-left: auto;
   left: 0px;
   right: 0px;
-  align-items: flex-end;
+  align-items: center;
+  padding-bottom: 45px;
+}
+
+.quote-body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:120.5%;
+  font-weight: 300;
+  color: #FFFFFF;
+  line-height:120%;
+  text-align: center;
+}
+
+.quote-author-text {
+  font-size:70%;
 }
 
 #holiday-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-content: space-around;
-  margin-right: 10%;
-  margin-left: 10%;
+  align-items: center;
+  margin-right: 8%;
+  margin-left: 8%;
+  height: 46vh;
 }
 
 .national-holidays {
@@ -183,32 +78,35 @@ input[type=submit] {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: 160px;
-  height: 160px;
-  background: rgba(222, 139, 159, 0.3);
+  width: 155px;
+  height: 155px;
+  background: rgba(232, 219, 228, 0.3);
+  -webkit-transition: background 8s;
 }
 
 .national-holidays:hover {
-  background-color: #99a5cd;
+  background-color: #d4bfcd;
   box-shadow: 0 0 8px #ea4c89, inset 0 0 8px #ea4c89;
   -webkit-animation: pulse 2s linear 1s infinite;
+  -webkit-transition: background 1s;
 }
 
 .holiday-names {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 140.5%;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
   vertical-align: middle;
   width: 80%;
 }
 
 .holiday-names:hover {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 5px #cdaed0;
+  font-weight: 320;
 }
 
 .hidden {
   display: none;
 }
-
