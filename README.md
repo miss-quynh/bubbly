@@ -1,5 +1,4 @@
 <h1><i> bubbly </i></h1>
-<hr>
 
 <p> A web application that allows you to check the national holidays and receive an inspirational quote each day. </p>
 
