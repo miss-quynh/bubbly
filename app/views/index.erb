@@ -1,0 +1,38 @@
+<div class="home-page">
+  <h1 id="welcome">Welcome!</h1>
+
+  <div class="sign-in-container">
+    <div class="link_buttons">
+      <% if logged_in? %>
+        <div class='half-button'>
+          <a href="/logout" class="sign_out_button">Sign Out</a>
+        </div>
+      <% else %>
+        <div class='half-button border-right'>
+          <a href="/sessions/new" class="sign_in_button">Sign In</a>
+        </div>
+        <div class='half-button'>
+          <a href="/users/new" class="sign_up_button">Sign Up</a>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="form hidden">
+      <form action="/sessions" method="POST">
+        <div class="container">
+          <label><b>Username</b></label>
+          <input type="text" name="username" placeholder="Username">
+
+          <label><b>Password</b></label>
+          <input type="password" name="password" placeholder="Password">
+
+          <input type="submit" value="Sign In">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="text-divider">
+    created by: Quynh Nguyen
+  </div>
+</div>
