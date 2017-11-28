@@ -1,5 +1,14 @@
+<h1><i> bubbly </i></h1>
+<hr>
 
-A web application that allows you to check the national holidays and receive an inspirational quote each day.
+<p> A web application that allows you to check the national holidays and receive an inspirational quote each day. </p>
+
+![Screenshot](public/bubbly_page_1.png)
+
+A notable feature is an inspirational quote at the bottom of the page. Similarly to the national holidays, the inspirational quote changes each day. If you hover over the quote, the author's name will display.
+
+![Screenshot](public/bubbly_page_2.png)
+<hr>
 
 ### Contributing
 
